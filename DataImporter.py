@@ -20,13 +20,13 @@ class DataImporter(object):
         return res
     
     def get_data(self, sym):
-        data, meta = ts.get_intraday(sym)
+        data, meta = ts.get_daily_adjusted(sym)
         return self.get_ndarray(data)
 
 if __name__ == '__main__':
     d = DataImporter()
     sym = 'GOOGL'
-    print(d.get_data(sym)[:2])
+    print(d.get_data(sym)[:4])
 
 
 
