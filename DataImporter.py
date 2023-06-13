@@ -18,11 +18,15 @@ class DataImporter(object):
                 res[i, j] = float(point[column])
         res = np.insert(res, 0, dates, axis=1)
         return res
+    
+    def get_data(self, sym):
+        data, meta = ts.get_intraday(sym)
+        return self.get_ndarray(data)
 
 if __name__ == '__main__':
-    data, meta_data = ts.get_intraday('GOOGL')
     d = DataImporter()
-    print(d.get_ndarray(data)[:2])
+    sym = 'GOOGL'
+    print(d.get_data(sym)[:2])
 
 
 
