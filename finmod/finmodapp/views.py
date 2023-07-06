@@ -13,6 +13,7 @@ from .serializers import UserSerializer, GroupSerializer
 
 # Create your views here.
 
+# this view shows a singular stock time series for MSFT
 def api_endpoint_view(request):
     url = "https://alpha-vantage.p.rapidapi.com/query"
 
