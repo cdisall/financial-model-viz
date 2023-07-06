@@ -7,6 +7,8 @@ import numpy as np
 import datetime
 
 if __name__ == '__main__':
+
+    ####################### COPY AND PASTE EVERYTHIGN BELOW THIS LINE ############################################
     # Create data importer and predictor
     di = DataImporter.DataImporter()
     predictor = Predictor.Predictor()
