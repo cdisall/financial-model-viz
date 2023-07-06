@@ -20,4 +20,5 @@ from django.urls import include, path
 urlpatterns = [
     path("finmodapp/", include("finmodapp.urls")),
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_frameworks.urls'))
 ]
